@@ -1,5 +1,6 @@
 import React from 'react';
-import './NavBar.css'
+import CartWidget from './CartWidget/CartWidget'
+import './NavBar.css';
 export default function NavBar() {
     return (
         <>
@@ -17,7 +18,7 @@ export default function NavBar() {
                             </li>
                             <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Categoy
+                                Category
                             </a>
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a className="dropdown-item" href="#">CelPhones</a></li>
@@ -28,6 +29,11 @@ export default function NavBar() {
                             </li>
                             <li className="nav-item">
                             <a className="nav-link active" aria-current="page" href="#">Contact</a>
+                            </li>
+                            <li className="nav-item">
+                            <a className="nav-link active" aria-current="page" href="#">
+                            <CartWidget/>
+                            </a>
                             </li>
                             {/* <li className="nav-item">
                             <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
