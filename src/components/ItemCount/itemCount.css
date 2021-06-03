@@ -1,0 +1,17 @@
+.button-cant {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 15px;
+}
+
+.button-cant .cant {
+  border: 0;
+  outline: none;
+  text-align: center;
+  width: 30px;
+}
+/*# sourceMappingURL=itemCount.css.map */
