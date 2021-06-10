@@ -15,11 +15,11 @@ export default function ItemCount({stock, initial, onAdd}) {
     return (
         <>
             <div className="button-cant">
-                <button type="button" class="btn btn-outline-warning" onClick={decrement}>-</button>
+                <button type="button" className="btn btn-outline-warning" onClick={decrement}>-</button>
                 <input className="cant" disabled value={count}/>
-                <button type="button" class="btn btn-outline-info" onClick={increase}>+</button>
+                <button type="button" className="btn btn-outline-info" onClick={increase}>+</button>
             </div>
-            <button type="button" class="btn btn-outline-success" onClick={e => onAdd(e,count)}>Agregar al Carrito</button>
+            <button type="button" className="btn btn-outline-success" onClick={e => onAdd(e,count)}>Agregar al Carrito</button>
         </>
     )
 }
