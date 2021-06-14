@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function ItemDetail({props}) {
+export default function ItemDetail(props) {
     console.log(props)
     
     return (
@@ -12,7 +12,6 @@ export default function ItemDetail({props}) {
                 <li>title: {props.title}</li>
                 <li>description: {props.description}</li>
                 <li>price: {props.price}</li>
-                <li><ItemCount stock={5} initial={1} onAdd={onAdd}/></li>
             </ul> */}
             {/* <button>Ver mas</button> */}
         </div>
