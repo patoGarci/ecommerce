@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function ItemDetail(props) {
-    console.log(props)
+export default function ItemDetail({item}) {
+    console.log(item)
     
     return (
         <div>
