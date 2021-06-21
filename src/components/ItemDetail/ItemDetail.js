@@ -5,14 +5,15 @@ export default function ItemDetail({item}) {
     
     return (
         <div>
-            {/*
             <ul className="card" style={{"width": "40%", "listStyle": "none"}}>
-                <li><img class="card-img-top" src={props.pictureUrl}/></li>
-                <li>id: {props.id}</li>
-                <li>title: {props.title}</li>
-                <li>description: {props.description}</li>
-                <li>price: {props.price}</li>
-            </ul> */}
+                <li><img class="card-img-top" src={item.pictureUrl}/></li>
+                <li>id: {item.id}</li>
+                <li>title: {item.title}</li>
+                <li>description: {item.description}</li>
+                <li>price: {item.price}</li>
+                <li>color: {item.color}</li>
+                <li>nota: {item.nota}</li>
+            </ul>
             {/* <button>Ver mas</button> */}
         </div>
     )
