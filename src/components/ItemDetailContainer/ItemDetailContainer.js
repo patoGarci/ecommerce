@@ -22,7 +22,9 @@ export default function ItemDetailContainer() {
         description: 'nuevo',
         price: '$3000000',
         pictureUrl:'https://images.unsplash.com/photo-1546706887-a24528987a75?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fGh1YXdlaXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-        category : "celphones"
+        category : "celphones",
+        color: "",
+        nota : "El chip A14 Bionic, el más rápido en un smartphone. Una pantalla OLED de borde a borde. Un nuevo frente de Ceramic Shield, cuatro veces más resistente a las caídas. Además, ahora el modo Noche viene en todas las cámaras. El iPhone 12 lo tiene todo. Y está disponible en dos tamaños perfectos."
       },
       {
         id: '2',
@@ -30,7 +32,9 @@ export default function ItemDetailContainer() {
         description: 'nuevo',
         price: '$7000000',
         pictureUrl:'https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fHR2fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
-        category : "tv"
+        category : "tv",
+        color: "azul",
+        nota : "El chip A14 Bionic, el más rápido en un smartphone. Una pantalla OLED de borde a borde. Un nuevo frente de Ceramic Shield, cuatro veces más resistente a las caídas. Además, ahora el modo Noche viene en todas las cámaras. El iPhone 12 lo tiene todo. Y está disponible en dos tamaños perfectos."
       },
       {
         id: '3',
@@ -38,7 +42,9 @@ export default function ItemDetailContainer() {
         description: 'nuevo',
         price: '$1800000',
         pictureUrl:'https://images.unsplash.com/photo-1596320378136-c6a182f7d0b3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzR8fHR2fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-        category : "tv"
+        category : "tv",
+        color: "azul",
+        nota : "El chip A14 Bionic, el más rápido en un smartphone. Una pantalla OLED de borde a borde. Un nuevo frente de Ceramic Shield, cuatro veces más resistente a las caídas. Además, ahora el modo Noche viene en todas las cámaras. El iPhone 12 lo tiene todo. Y está disponible en dos tamaños perfectos."
       },];
     useEffect(()=>{
         console.log(id)
