@@ -54,7 +54,7 @@ export default function ItemDetailContainer() {
             });
         };
         getItem().then(res=>{
-            setItem(res.filter(item => item.id === id)[0])
+            setItem(res.find(item => item.id === id))
         });
     }, [id]);
     return (
