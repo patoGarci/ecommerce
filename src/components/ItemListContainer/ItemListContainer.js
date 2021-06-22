@@ -8,9 +8,10 @@ export default function ItemListContainer() {
   useEffect(() => {
     new Promise((resolve, reject)=>{
       setTimeout(() => {
-        resolve([
+        resolve(
+          [
           {
-            id: '1',
+            id: '0',
             title: 'iphone',
             description: 'usado',
             price: '$5000000',
@@ -18,7 +19,7 @@ export default function ItemListContainer() {
             category : "celphones"
           },
           {
-            id: '2',
+            id: '1',
             title: 'huawei',
             description: 'nuevo',
             price: '$3000000',
@@ -26,7 +27,7 @@ export default function ItemListContainer() {
             category : "celphones"
           },
           {
-            id: '3',
+            id: '2',
             title: 'tv samsung',
             description: 'nuevo',
             price: '$7000000',
@@ -34,14 +35,15 @@ export default function ItemListContainer() {
             category : "tv"
           },
           {
-            id: '4',
+            id: '3',
             title: 'tv',
             description: 'nuevo',
             price: '$1800000',
             pictureUrl:'https://images.unsplash.com/photo-1596320378136-c6a182f7d0b3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzR8fHR2fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
             category : "tv"
           }
-        ]);
+        ]
+        );
       }, 2000);
     })
     .then(res =>

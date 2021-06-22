@@ -7,13 +7,13 @@ function App() {
   return (
     <BrowserRouter>
     <div className="App">
-    <NavBar/>
+      <NavBar/>
       <Switch>
         <Route exact path="/">
           <ItemListContainer name="lista de productos"/>
         </Route>
         <Route exact path='/category/:category'><ItemListContainer /></Route>
-        <Route exact path='/iems/:id'><ItemDetailContainer /></Route>
+        <Route exact path='/item/:id'><ItemDetailContainer /></Route>
       </Switch>
       </div>
     </BrowserRouter>
