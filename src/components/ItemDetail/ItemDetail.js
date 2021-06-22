@@ -1,8 +1,15 @@
-import React from 'react'
+import  {React, useState } from 'react'
 import './ItemDetail.css'
+import ItemCount from '../ItemCount/ItemCount'
+import { Link } from 'react-router-dom';
+
 export default function ItemDetail({item}) {
-    console.log(item.title);
-    
+    // console.log(item.title);
+    const [buyQuantity, setbuyQuantity] = useState(0);
+
+    const onAdd = (count) => {
+        setbuyQuantity(count);
+    }
     return (
         <div className="card-item-detail">
             <img class="card-img-top" src={item.pictureUrl}/>
@@ -14,6 +21,12 @@ export default function ItemDetail({item}) {
                 <li>price: {item.price}</li>
                 <li>color: {item.color}</li>
                 <li>nota: {item.nota}</li>
+                <li>
+                {buyQuantity===0 ?
+                        (<ItemCount stock={5} initial={1} onAdd={onAdd} />) :
+                        (<Link to='/'><button className="btn btn-primary">Terminar Compra</button></Link>)
+                    }
+                </li>
             </ul>
         </div>
     )
