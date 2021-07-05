@@ -103,12 +103,4 @@ function CartProvider({ defaultValue = [], children }) {
     );
 }
 
-function CartConsumer({ defaultValue = [], children }) {
-    return (
-        <CartContext.Consumer>
-            {children}
-        </CartContext.Consumer>
-    );
-}
-
-export { CartProvider, CartConsumer, CartContext };
+export { CartProvider, CartContext };
