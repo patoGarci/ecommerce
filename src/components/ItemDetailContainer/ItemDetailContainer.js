@@ -47,7 +47,7 @@ export default function ItemDetailContainer() {
         nota : "El chip A14 Bionic, el más rápido en un smartphone. Una pantalla OLED de borde a borde. Un nuevo frente de Ceramic Shield, cuatro veces más resistente a las caídas. Además, ahora el modo Noche viene en todas las cámaras. El iPhone 12 lo tiene todo. Y está disponible en dos tamaños perfectos."
       },];
     useEffect(()=>{
-        console.log(id)
+        // console.log(id)
         const getItem = () =>{
             return new Promise((resolve,reject)=>{
                 resolve(data);

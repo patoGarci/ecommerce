@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function CartWidget() {
     return (
         <>
-            <i class="fas fa-shopping-cart"></i>
+            <Link to='../cart'>
+                <i class="fas fa-shopping-cart"></i>
+            </Link>
         </>
     )
 }

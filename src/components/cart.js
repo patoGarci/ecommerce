@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function card() {
+export default function cart() {
     return (
         <div>
             
