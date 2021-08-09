@@ -1,0 +1,11 @@
+.button-cant{
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    .cant{
+        border:0;
+        outline: none;
+        text-align: center;
+        width: 30px;
+    }
+}
