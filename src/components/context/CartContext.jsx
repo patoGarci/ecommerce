@@ -59,15 +59,7 @@ export const CartProvider = (props) => {
     cartItems.forEach(element => {
       totalPrice = totalPrice + element.price
     });
-    // cartItems.forEach(
-    //   (
-    //     {
-    //       quantity, item
-    //     }
-    //   ) => totalPrice = totalPrice + (item.price * quantity))
     return totalPrice
-    console.log(cartItems)
-
   }
 
   return (
