@@ -46,10 +46,29 @@ export const CartProvider = (props) => {
       setCartItems(newItems);
     }
   };
+  const clear = (id) => {
+    setCartItems([])
+  }
 
   const getTotalItemsInCart = () => {
     return cartItems.reduce((acc, curr) => acc + curr.quantity, 0);
   };
+
+  function getTotalPrice(){
+    let totalPrice = 0;
+    cartItems.forEach(element => {
+      totalPrice = totalPrice + element.price
+    });
+    // cartItems.forEach(
+    //   (
+    //     {
+    //       quantity, item
+    //     }
+    //   ) => totalPrice = totalPrice + (item.price * quantity))
+    return totalPrice
+    console.log(cartItems)
+
+  }
 
   return (
     <CartContext.Provider
@@ -60,6 +79,8 @@ export const CartProvider = (props) => {
         getTotal,
         removeItem,
         getTotalItemsInCart,
+        clear,
+        getTotalPrice,
       }}
     >
       {props.children}

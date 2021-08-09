@@ -14,7 +14,7 @@ export default function ItemDetail({ item }) {
   };
   return (
     <div className="card-item-detail">
-      <img alt="" className="card-img-top" src={item.pictureUrl} />
+      <img alt="" className="card-img-top" src={item.imageId} />
       <ul className="card" style={{ width: '40%', listStyle: 'none' }}>
         <li>id: {item.id}</li>
         <li>title: {item.title}</li>

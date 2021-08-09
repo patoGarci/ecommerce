@@ -1,7 +1,13 @@
 import React from 'react';
 import Item from '../Item/Item';
 import './ItemLits.css';
+
 export default function ItemList(props) {
+  const listItems = props.items.length?props.items.map((data) => {
+    return(
+      <Item data={data}/>
+    )
+  }):<p>Loading...</p>;
   return (
     <div className="card-item">
       {props.items.map((x, index) => (
@@ -11,7 +17,7 @@ export default function ItemList(props) {
           title={x.title}
           price={x.price}
           description={x.description}
-          pictureUrl={x.pictureUrl}
+          imageId={x.imageId}
         />
       ))}
     </div>

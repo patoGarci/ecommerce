@@ -4,7 +4,7 @@ import { CartContext } from '../context/CartContext';
 import { Link } from 'react-router-dom';
 
 export const Cart = () => {
-  const { cartItems, removeItem } = useContext(CartContext);
+  const { cartItems, removeItem, clear, getTotalPrice } = useContext(CartContext);
   return (
     <div className="Cart">
       {(!cartItems || !cartItems.length) && (
@@ -22,7 +22,7 @@ export const Cart = () => {
             return (
               <li key={item.id} className="cart-item">
                 <div className="cart-item-picture">
-                  <img src={item.pictureUrl} alt={item.title} />
+                  <img src={item.imageId} alt={item.title} />
                 </div>
                 <div className="cart-item-title">{item.title}</div>
                 <div className="cart-item-price">{item.price}</div>
@@ -37,6 +37,8 @@ export const Cart = () => {
           })}
         </ul>
       )}
+      <span><strong>Total: </strong>${getTotalPrice()}</span>
+                <button onClick={() => {clear()}}>Delete</button>
     </div>
   );
 };
