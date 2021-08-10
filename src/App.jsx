@@ -10,7 +10,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <CartProvider>
+        <CartProvider defaultValue={[]}>
           <NavBar />
           <Switch>
             <Route exact path="/">
