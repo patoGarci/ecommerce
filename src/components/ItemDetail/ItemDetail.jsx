@@ -1,20 +1,17 @@
-import { React, useContext,useState } from 'react';
+import { React, useContext } from 'react';
 import './ItemDetail.css';
 import ItemCount from '../ItemCount/ItemCount';
 import { CartContext } from '../context/CartContext';
-import { Link } from 'react-router-dom';
-export default function ItemDetail({ item }) {
-  const [buyQuantity, setbuyQuantity] = useState(0);
 
+export default function ItemDetail({ item }) {
   const { addItem } = useContext(CartContext);
 
   const onAdd = (e, quantity) => {
     addItem({ ...item, quantity });
-    setbuyQuantity(quantity);
   };
   return (
     <div className="card-item-detail">
-      <img alt="" className="card-img-top" src={item.imageId} />
+      <img alt="" className="card-img-top" src={item.pictureUrl} />
       <ul className="card" style={{ width: '40%', listStyle: 'none' }}>
         <li>id: {item.id}</li>
         <li>title: {item.title}</li>
@@ -23,11 +20,7 @@ export default function ItemDetail({ item }) {
         <li>color: {item.color}</li>
         <li>nota: {item.nota}</li>
         <li>
-          {/* <ItemCount stock={5} initial={1} onAdd={onAdd} /> */}
-          {buyQuantity===0 ?
-                        (<ItemCount stock={5} initial={1} onAdd={onAdd} />) :
-                        (<Link to="/cart"><button className="btn btn-primary">Terminar Compra</button></Link>)
-                    }
+          <ItemCount stock={5} initial={1} onAdd={onAdd} />
         </li>
       </ul>
     </div>

@@ -46,20 +46,13 @@ export const CartProvider = (props) => {
       setCartItems(newItems);
     }
   };
-  const clear = (id) => {
-    setCartItems([])
-  }
 
   const getTotalItemsInCart = () => {
     return cartItems.reduce((acc, curr) => acc + curr.quantity, 0);
   };
 
-  function getTotalPrice() {
-    let totalPrice = 0;
-    cartItems.forEach(
-      ({ quantity, price }) => (totalPrice = totalPrice + price * quantity)
-    );
-    return totalPrice;
+  const clear = (id) => {
+    setCartItems([])
   }
 
   return (
@@ -72,7 +65,6 @@ export const CartProvider = (props) => {
         removeItem,
         getTotalItemsInCart,
         clear,
-        getTotalPrice,
       }}
     >
       {props.children}

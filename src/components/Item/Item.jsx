@@ -4,18 +4,18 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
 
 export default function Item(props) {
-  const { id, title, price, imageId, categoryId } = props;
+  const { id, title, price, pictureUrl, category } = props;
   const { addItem } = useContext(CartContext);
 
   const onAdd = (e, quantity) => {
-    addItem({ id, title, imageId, price, categoryId, quantity });
+    addItem({ id, title, pictureUrl, price, category, quantity });
   };
   return (
     <>
       <ul className="card" style={{ width: '40%', listStyle: 'none' }}>
         <li>
           <Link to={`/item/${id}`}>
-            <img alt="" className="card-img-top" src={imageId} />
+            <img alt="" className="card-img-top" src={pictureUrl} />
           </Link>
         </li>
         <li>id: {id}</li>
