@@ -54,12 +54,12 @@ export const CartProvider = (props) => {
     return cartItems.reduce((acc, curr) => acc + curr.quantity, 0);
   };
 
-  function getTotalPrice(){
+  function getTotalPrice() {
     let totalPrice = 0;
-    cartItems.forEach(element => {
-      totalPrice = totalPrice + element.price
-    });
-    return totalPrice
+    cartItems.forEach(
+      ({ quantity, price }) => (totalPrice = totalPrice + price * quantity)
+    );
+    return totalPrice;
   }
 
   return (
