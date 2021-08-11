@@ -3,6 +3,7 @@
 **Ecommerce Proyecto de curso Cordehouse React**
 
 Encontraras Un catalogo de los productos con su respectiva categoria
+![](https://media.giphy.com/media/di1Fksbkwnv5xic8g0/giphy.gif)
 
 [![React Demo Store](https://www.youtube.com/watch?v=ferPgrnqODw)]( https://www.youtube.com/watch?v=ferPgrnqODw)
 
