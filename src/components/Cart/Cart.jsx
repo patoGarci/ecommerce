@@ -1,10 +1,13 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import './Cart.scss';
 import { CartContext } from '../context/CartContext';
 import { Link } from 'react-router-dom';
+import Checkout from '../Checkout/Checkout';
+
 
 export const Cart = () => {
   const { cartItems, removeItem, getTotal, clear } = useContext(CartContext);
+  const [orderId, setOrderId] = useState();
   return (
     <div className="Cart">
       {(!cartItems || !cartItems.length) && (
@@ -39,6 +42,7 @@ export const Cart = () => {
         </ul>
         <b>total: $ {getTotal()}</b>
         <button onClick={() => {clear()}}>Delete</button>
+        <Checkout onOrderIdUpdate={(orderId) => setOrderId(orderId)} />
         </>
       )}
     </div>

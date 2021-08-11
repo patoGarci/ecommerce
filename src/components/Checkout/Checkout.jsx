@@ -7,7 +7,7 @@ import { getFirestore } from "../../firebase";
 import "./checkout.css";
 
 function Checkout({ onOrderIdUpdate }) {
-  const { cartItems, getTotalPrice, clear } = useContext(CartContext);
+  const { cartItems, getTotal, clear } = useContext(CartContext);
 
   const db = getFirestore();
   const orders = db.collection("orders");
@@ -45,7 +45,7 @@ function Checkout({ onOrderIdUpdate }) {
         buyer: inputs,
         date: firebase.firestore.Timestamp.fromDate(new Date()),
         items: cartItems,
-        total: getTotalPrice(),
+        total: getTotal(),
       });
       setOrderId(id);
       setProcessing(false);
