@@ -17,6 +17,7 @@ export const Cart = () => {
         </div>
       )}
       {cartItems && !!cartItems.length && (
+        <>
         <ul>
           {cartItems.map((item) => {
             return (
@@ -36,9 +37,10 @@ export const Cart = () => {
             );
           })}
         </ul>
+        <b>total: $ {getTotal()}</b>
+        <button onClick={() => {clear()}}>Delete</button>
+        </>
       )}
-      <b>total: $ {getTotal()}</b>
-      <button onClick={() => {clear()}}>Delete</button>
     </div>
   );
 };
