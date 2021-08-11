@@ -4,7 +4,7 @@
 
 Encontraras Un catalogo de los productos con su respectiva categoria
 
-[![React Demo Store](https://img.youtube.com/vi/watch?v=ferPgrnqODw/0.jpg)]( https://www.youtube.com/watch?v=ferPgrnqODw)
+[![React Demo Store](https://www.youtube.com/watch?v=ferPgrnqODw)]( https://www.youtube.com/watch?v=ferPgrnqODw)
 
 
 Pasos para verlo en tu maquina:
