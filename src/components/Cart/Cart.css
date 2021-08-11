@@ -1,9 +1,20 @@
 .Cart {
-  text-align: left;
+  margin-left: 2%;
 }
 
 .Cart ul {
   list-style: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.items-buy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .empty-cart {
@@ -17,40 +28,81 @@
 }
 
 .cart-item {
-  margin-bottom: 20px;
-  display: -ms-grid;
-  display: grid;
-  gap: 10px;
-      grid-template-areas: 'picture picture title quantity delete' 'picture picture price . delete' 'picture picture . . delete' 'picture picture . . delete';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+ul {
+  padding: 0;
 }
 
 .cart-item-picture {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 4;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: picture;
 }
 
 .cart-item-picture img {
-  max-width: 100%;
+  width: 300px;
 }
 
-.cart-item-title {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  grid-area: title;
+.all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.cart-item-price {
-  -ms-grid-row: 2;
-  -ms-grid-column: 3;
-  grid-area: price;
+.info-extra {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  margin-left: 5%;
 }
 
-.cart-item-quantity {
-  -ms-grid-row: 1;
-  -ms-grid-column: 4;
-  grid-area: quantity;
+.info-extra b {
+  text-align: left !important;
+}
+
+.info-extra .btn-outline-danger {
+  width: 70%;
+}
+
+@media screen and (min-width: 1000px) {
+  .Cart {
+    margin-left: 10%;
+  }
+  .Cart .all {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .Cart .all .info-extra {
+    width: 20%;
+    margin-left: 0%;
+  }
+  .Cart .all .items-buy .cart-item {
+    width: 40%;
+    margin: 5%;
+  }
 }
 /*# sourceMappingURL=Cart.css.map */

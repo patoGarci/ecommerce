@@ -1,22 +1,19 @@
 .checkout {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.checkout .checkout-form label {
-  margin: 0;
-}
-
-.checkout .checkout-form label p {
-  margin: 0;
-}
-
-.add-button {
-  margin: 40px;
-}
-
-/* .checkout {
+    display: flex;
+    .checkout-form{
+        label{
+            margin: 0;
+            p{
+                margin: 0;
+            }
+        }
+    }
+  }
+  
+  .add-button{
+    margin: 40px;
+  }
+  /* .checkout {
       max-width: 750px;
       margin: 0 auto;
       margin-top: 60px;
@@ -35,4 +32,3 @@
       font-size: 1rem;
       outline: none;
     } */
-/*# sourceMappingURL=Checkout.css.map */

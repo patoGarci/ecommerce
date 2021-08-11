@@ -34,7 +34,7 @@ export default function CartWidget() {
               <li key={item.id}>
                 <div>{item.title}</div>
                 <div className="">
-                  <b>{item.price}</b> x {item.quantity}
+                  <b>${item.price}</b> x {item.quantity}
                 </div>
               </li>
             ))}
@@ -43,7 +43,7 @@ export default function CartWidget() {
           <b>total:</b> {getTotal()}
         </div>
         <div className="cart-widget-link">
-          <Link to="/cart">view cart</Link>
+          <Link to="/cart">View cart</Link>
         </div>
       </div>
     </>

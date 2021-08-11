@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
 
 export default function Item(props) {
+  console.log(props)
   const { id, title, price, imageId, category, dataId } = props;
   const { addItem } = useContext(CartContext);
 
@@ -12,16 +13,16 @@ export default function Item(props) {
   };
   return (
     <>
-      <ul className="card" style={{ width: '40%', listStyle: 'none' }}>
+      <ul className="card" data-id={dataId} style={{ width: '40%', listStyle: 'none' }}>
         <li>
           <Link to={`/item/${id}`}>
             <img alt="" className="card-img-top" src={imageId} />
           </Link>
         </li>
-        <li>id: {id}</li>
-        <li>title: {title}</li>
-        <li>description: {props.description}</li>
-        <li>price: {price}</li>
+        <li>Id: {id}</li>
+        <li>Title: {title}</li>
+        <li>Description: {props.description}</li>
+        <li>Price: {price}</li>
         {/* <li>
           <ItemCount stock={5} initial={1} onAdd={onAdd} />
         </li> */}

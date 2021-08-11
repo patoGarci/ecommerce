@@ -19,7 +19,7 @@ export default function ItemCount({stock, initial, onAdd}) {
                 <input className="cant" disabled value={count}/>
                 <button type="button" className="btn btn-outline-info" onClick={increase}>+</button>
             </div>
-            <button type="button" className="btn btn-outline-success" onClick={e => onAdd(e,count)}>Agregar al Carrito</button>
+            <button type="button" className="btn btn-outline-success" onClick={e => onAdd(e,count)}>Add to cart</button>
         </>
     )
 }

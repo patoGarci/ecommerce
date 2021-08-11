@@ -94,7 +94,7 @@ function Checkout({ onOrderIdUpdate }) {
             {processing ? (
               <p>Processing payment...</p>
             ) : (
-              <button type="submit" className="add-button">
+              <button type="submit" className="add-button btn btn-success">
                 Checkout
               </button>
             )}

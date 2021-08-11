@@ -20,17 +20,24 @@ export const Cart = () => {
         </div>
       )}
       {cartItems && !!cartItems.length && (
-        <>
-        <ul>
+        <div className="all">
+        <div className="info-extra">
+          <button className="btn btn-outline-danger" onClick={() => {clear()}}>Delete all</button>
+          <b>total: $ {getTotal()}</b>
+          <Checkout onOrderIdUpdate={(orderId) => setOrderId(orderId)} />
+        </div>
+        <ul className="items-buy">
           {cartItems.map((item) => {
             return (
               <li key={item.dataId} className="cart-item">
                 <div className="cart-item-picture">
                   <img src={item.imageId} alt={item.title} />
                 </div>
-                <div className="cart-item-title">{item.title}</div>
-                <div className="cart-item-price">{item.price}</div>
-                <div className="cart-item-quantity">{item.quantity}</div>
+                <div className="cart-item-title">{item.title}
+                </div>
+                <div className="cart-item-price">${item.price}</div>
+                <div className="cart-item-quantity">
+                  <b>Quanty </b>{item.quantity}</div>
                 <div className="cart-item-delete">
                   <button className="btn" onClick={() => removeItem(item.dataId)}>
                     <div className="fas fa-trash-alt"></div>
@@ -40,10 +47,7 @@ export const Cart = () => {
             );
           })}
         </ul>
-        <b>total: $ {getTotal()}</b>
-        <button onClick={() => {clear()}}>Delete</button>
-        <Checkout onOrderIdUpdate={(orderId) => setOrderId(orderId)} />
-        </>
+        </div>
       )}
     </div>
   );
