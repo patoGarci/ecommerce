@@ -5,12 +5,13 @@ export const CartContext = createContext();
 export const CartProvider = (props) => {
   const [cartItems, setCartItems] = useState([]);
 
-  const getItemIndex = (id) => {
-    return cartItems.findIndex((item) => item.id === id);
+  const getItemIndex = (dataId) => {
+    return cartItems.findIndex((item) => item.dataId === dataId);
   };
 
   const addItem = (item) => {
-    const itemIndex = getItemIndex(item.id);
+    console.log(item)
+    const itemIndex = getItemIndex(item.dataId);
     if (itemIndex === -1) {
       setCartItems([...cartItems, item]);
     }
@@ -20,17 +21,17 @@ export const CartProvider = (props) => {
   };
 
   const updateCartItem = (item, index) => {
-    const found = getItem(item.id);
+    const found = getItem(item.dataId);
     if (found) {
       found.quantity = found.quantity + item.quantity;
-      const newItems = cartItems.filter((cartItem) => cartItem.id !== found.id);
+      const newItems = cartItems.filter((cartItem) => cartItem.dataId !== found.dataId);
       newItems.push(found);
       setCartItems(newItems);
     }
   };
 
-  const getItem = (id) => {
-    return cartItems.find((item) => item.id === id);
+  const getItem = (dataId) => {
+    return cartItems.find((item) => item.dataId === dataId);
   };
 
   const getTotal = () => {
@@ -39,10 +40,12 @@ export const CartProvider = (props) => {
     }, 0);
   };
 
-  const removeItem = (id) => {
-    const itemIndex = getItemIndex(id);
+  const removeItem = (dataId) => {
+    console.log("cartContex")
+    console.log(dataId)
+    const itemIndex = getItemIndex(dataId);
     if (itemIndex >= 0) {
-      const newItems = cartItems.filter((item) => item.id !== id);
+      const newItems = cartItems.filter((item) => item.dataId !== dataId);
       setCartItems(newItems);
     }
   };
@@ -51,7 +54,7 @@ export const CartProvider = (props) => {
     return cartItems.reduce((acc, curr) => acc + curr.quantity, 0);
   };
 
-  const clear = (id) => {
+  const clear = (dataId) => {
     setCartItems([])
   }
 

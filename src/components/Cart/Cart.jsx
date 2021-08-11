@@ -20,15 +20,15 @@ export const Cart = () => {
         <ul>
           {cartItems.map((item) => {
             return (
-              <li key={item.id} className="cart-item">
+              <li key={item.dataId} className="cart-item">
                 <div className="cart-item-picture">
-                  <img src={item.pictureUrl} alt={item.title} />
+                  <img src={item.imageId} alt={item.title} />
                 </div>
                 <div className="cart-item-title">{item.title}</div>
                 <div className="cart-item-price">{item.price}</div>
                 <div className="cart-item-quantity">{item.quantity}</div>
                 <div className="cart-item-delete">
-                  <button className="btn" onClick={() => removeItem(item.id)}>
+                  <button className="btn" onClick={() => removeItem(item.dataId)}>
                     <div className="fas fa-trash-alt"></div>
                   </button>
                 </div>
