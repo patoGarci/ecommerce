@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import './Cart.scss';
+import './Cart.css';
 import { CartContext } from '../context/CartContext';
 import { Link } from 'react-router-dom';
 import Checkout from '../Checkout/Checkout';
@@ -14,6 +14,14 @@ export const Cart = () => {
         <div className="empty-cart">
           <i className="fas fa-shopping-cart"></i>
           <div className="my-4">Empty Cart</div>
+          {orderId ? (
+            <p style={{"color": "black"}}>
+              <b> last payment number</b>
+              {orderId}
+            </p>
+          ) : (
+            <p></p>
+          )}
           <Link className="btn btn-primary" to="/">
             Begin Shopping
           </Link>

@@ -42,12 +42,9 @@ ul {
   padding: 0;
 }
 
-.cart-item-picture {
-  grid-area: picture;
-}
-
 .cart-item-picture img {
   width: 300px;
+  height: 250px;
 }
 
 .all {

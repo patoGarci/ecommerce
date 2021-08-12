@@ -1,17 +1,17 @@
 import React from 'react';
 import CartWidget from './CartWidget/CartWidget';
-import './NavBar.scss';
+import './NavBar.css';
 import { Link } from 'react-router-dom';
 export default function NavBar() {
   return (
     <>
-      <h1>Ecommerce</h1>
+      <h1>Home appliances</h1>
       <div className="navbar navbar-expand-lg navbar-light">
         <div className="container-fluid">
           <img
             alt=""
             className="navbar-brand logo"
-            src="https://images.unsplash.com/photo-1567446537708-ac4aa75c9c28?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bG9nb3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            src="https://images.unsplash.com/photo-1615915468538-0fbd857888ca?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=403&q=80"
           />
           <button
             className="navbar-toggler"
@@ -24,7 +24,7 @@ export default function NavBar() {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <div className="collapse navbar-collapse" id="navbarSupportedContent" >
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/">

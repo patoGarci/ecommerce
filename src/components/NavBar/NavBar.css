@@ -1,18 +1,21 @@
 h1 {
-  margin-top: 30px;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .navbar {
-  padding: 3% 15%;
+  padding-right: 5%;
+  margin: 5% 10%;
 }
 
 .navbar .logo {
   width: 5%;
   border-radius: 100%;
+  margin-left: 4%;
 }
 
 .navbar .collapse {
-  margin-left: 65%;
+  margin-left: 60%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

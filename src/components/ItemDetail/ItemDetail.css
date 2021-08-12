@@ -57,6 +57,8 @@
     width: 80%;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    height: 400px;
+    margin-left: 10%;
   }
   .card-item-detail img {
     width: 55%;
