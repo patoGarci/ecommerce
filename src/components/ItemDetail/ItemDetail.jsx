@@ -26,7 +26,7 @@ export default function ItemDetail({ item }) {
         </ul>
         <div className="itemCount">
           {buyQuantity===0 ?
-          (<ItemCount stock={5} initial={1} onAdd={onAdd} />) :
+          (<ItemCount stock={item.stock} initial={1} onAdd={onAdd} />) :
           (<Link to="/cart"><button className="btn btn-primary">Terminar Compra</button></Link>)
         }</div>
       </div>
